@@ -1,430 +1,353 @@
-# CC-LAB-3-Linux Commands Study
+## Ex.3 Virtualization: Installation and Configuration of Oracle VirtualBox & Kali Linux, and Execution of Linux Commands
+## NAME: Eshwer M
+## REG NUMBER: 212224040086
+## Aim:
+To set up a virtualized environment using Oracle VirtualBox, install Kali Linux as a guest OS, and execute fundamental Linux commands.
+
+## 3.a) Installation and Configuration of Oracle VirtualBox
+## Aim:
+To install and configure Oracle VM VirtualBox.
+
+## Pre-requisites:
+- Machine with Internet access
+- Minimum 4 GB RAM
+- Sufficient storage space
+## Steps:
+1.Download Oracle VM VirtualBox:
+
+- Visit Oracle VirtualBox Official Site
+- Download installer for your OS (Windows/macOS/Linux).
+
+2.Install Oracle VM VirtualBox (Example: Windows):
+
+- Launch Installer → Allow Changes → Click Next.
+- Choose Installation Options → Click Next.
+- Accept Network Interface Warning → Click Yes.
+- Click Install.
+- Finish Installation and Launch VirtualBox.
+
+3.Configure VirtualBox:
+
+- Open VirtualBox.
+- Click New → Name VM → Select Type (Linux/Windows) and Version.
+- Allocate:
+  
+     Minimum 2 GB RAM
+  
+     Create Virtual Hard Disk (20 GB recommended).
+  
+- Start Virtual Machine and provide ISO to install OS.
+## Result:
+Thus, Oracle VM VirtualBox was installed successfully.
+
+## 3.b) Installation and Configuration of Kali Linux
+## Aim:
+To install and configure Kali Linux in Oracle VirtualBox.
 
-## Introduction to Linux
+## Pre-requisites:
+- Oracle VM VirtualBox Installed
+- 4 GB RAM and 20 GB Storage Minimum
+- Kali Linux ISO image
+## Steps:
 
-**Linux** is an open-source operating system, and its kernel is the heart of the OS, facilitating communication between hardware and software. One of the key advantages of Linux is its customizability; developers can modify the Linux kernel to create their own tailored operating systems.
+1.Download Kali Linux ISO:
+- Visit Kali Linux Official Site
+- Download 64-bit ISO (Installer version).
+  
+2.Create a New Virtual Machine:
+- Open VirtualBox → Click New.
+- Name: "Kali Linux" → Type: Linux → Version: Debian (64-bit).
 
-## Linux Commands
+3. Allocate Memory:
+- Minimum 2 GB RAM (recommended 4 GB).
+  
+4.Create Virtual Hard Disk:
+- Select VDI (VirtualBox Disk Image).
+- Choose Dynamically allocated.
+- Set Disk size to 20 GB or more.
+  
+5.Configure ISO Image:
+- Settings → Storage → Controller: IDE → Empty CD → Choose Disk File → Select Kali Linux ISO.
+  
+6.Start Installation:
+- Boot Virtual Machine → Choose Graphical Install.
+- Set Language, Region, Keyboard.
+- Configure Network → Set Hostname (e.g., kali).
+- Set root password.
+- Disk Partitioning: Use entire disk → All files in one partition.
+- Install System → Install GRUB Bootloader → Finish Installation.
+  
+7.Login to Kali Linux:
+- Use root credentials.
+  
+8.(Optional) Install Guest Additions:
+- Devices → Insert Guest Additions CD Image → Follow steps inside Kali.
+  
+## Snapshots:
 
-Linux commands are executed in the terminal, which is case-sensitive. This guide covers some basic and advanced commands used in Linux.
+AWS Account Creation Snapshot
+## Snapshot 1: Installing Oracle VirtualBox image
+<img width="927" height="497" alt="Screenshot 2025-08-28 103507" src="https://github.com/user-attachments/assets/80010f1b-318d-437f-962c-a741cfda0d3d" />
 
-### 1. `ls` Command
 
-The `ls` command is used to display a list of contents in a directory.
+## Snapshot 2: Kali Running in Virtual image
+<img width="935" height="573" alt="Screenshot 2025-08-28 103519" src="https://github.com/user-attachments/assets/4894b551-1dc5-4ffd-8354-eadb514f50ba" />
 
-**Syntax:** 
-```bash
-ls
-```
 
-**Output:**
+## Result:
+Thus, Kali Linux guest OS was installed and configured successfully.
 
-<img width="219" alt="image" src="https://github.com/user-attachments/assets/0c0a657c-97f4-4e73-a483-e5e828390b14">
+## 3.c) Execution of Linux Commands in Kali
+## About Linux:
+- Open-source operating system.
+- Kernel manages communication between hardware and software.
+- Commands are case-sensitive.
+## Commands:
+## 1) ls Command
+The ls command is used to display a list of content of a directory.
 
+Syntax: ls
 
-### 2. `pwd` Command
+<img width="855" height="68" alt="cs1" src="https://github.com/user-attachments/assets/f2f46d3b-604e-4c5c-8229-c7ca373282c2" />
 
-The `pwd` command displays the location of the current working directory.
 
-**Syntax:**
-```bash
-pwd
-```
+## 2) pwd Command
+The pwd command is used to display the location of the current working directory.
 
-**Output:**
+Syntax: pwd
 
-<img width="319" alt="image" src="https://github.com/user-attachments/assets/7e3be958-92f4-46da-aa96-333f6986b51e">
+<img width="250" height="67" alt="cs2" src="https://github.com/user-attachments/assets/ed6c9de2-037f-4c56-bb03-b81df8c0241b" />
 
 
-### 3. `mkdir` Command
+## 3) mkdir Command
+The mkdir command is used to create a new directory under any directory.
 
-The `mkdir` command is used to create a new directory.
+Syntax: mkdir
 
-**Syntax:**
-```bash
-mkdir <directory_name>
-```
+<img width="930" height="116" alt="cs3" src="https://github.com/user-attachments/assets/11912044-da1b-4871-8437-23e2bfe86dfb" />
 
-**Output:**
 
-<img width="305" alt="image" src="https://github.com/user-attachments/assets/0b3a994f-dc6d-43e3-8933-65ee3d852a31">
+## 4) rmdir Command
+The rmdir command is used to delete a directory.
 
+Syntax: rmdir
 
-### 4. `rmdir` Command
+<img width="888" height="127" alt="cs4" src="https://github.com/user-attachments/assets/1d3dabb8-df45-48c7-84f8-23dfc91e86d1" />
 
-The `rmdir` command is used to delete a directory.
 
-**Syntax:**
-```bash
-rmdir <directory_name>
-```
+## 5) cd Command
+The cd command is used to change the current directory.
 
-**Output:**
+Syntax: cd
 
-<img width="301" alt="image" src="https://github.com/user-attachments/assets/4c0b13ed-8331-4ad2-a180-a315cb9b0926">
+<img width="354" height="158" alt="cs5" src="https://github.com/user-attachments/assets/ab7062f1-24ad-4e23-9460-fd2f937e7b51" />
 
 
-### 5. `cd` Command
+## 6) cat Command
+The cat command is a multi-purpose utility in the Linux system. It can be used to create a file, display content of the file, copy the content of one file to another file, and more.
 
-The `cd` command is used to change the current directory.
+Syntax: cat [OPTION]... [FILE]..
 
-**Syntax:**
-```bash
-cd <directory_name>
-```
+<img width="350" height="183" alt="cs6" src="https://github.com/user-attachments/assets/367c2256-e65c-4251-94b4-968e150a1f24" />
 
-**Output:**
 
-<img width="299" alt="image" src="https://github.com/user-attachments/assets/b0f678b8-b00b-4ac0-9e40-cbaf9b5a4d2c">
+## 7) cp Command
+The cp command is used to copy a file or directory.
 
+Syntax: cp
 
-### 6. `cat` Command
+<img width="334" height="133" alt="cs7" src="https://github.com/user-attachments/assets/7437249d-aaa5-430e-a242-c2037f9cf381" />
 
-The `cat` command is used to create, display, and concatenate files.
 
-**Syntax:**
-```bash
-cat [OPTION]... [FILE]...
-```
+## 8) gedit Command
+The gedit is a general-purpose text editor. It can be used to create and edit all kinds of text files.
 
-**Output:**
+Syntax: gedit file_name
 
-<img width="304" alt="image" src="https://github.com/user-attachments/assets/3e2759c2-9e2b-4e1e-8325-787f9dcbd755">
+<img width="501" height="40" alt="cs8" src="https://github.com/user-attachments/assets/aea7bca5-5c26-46bb-a180-986681a80e14" />
 
 
-### 7. `cp` Command
+## 9) su Command
+The su command provides administrative access to another user. In other words, it allows access of the Linux shell to another user.
 
-The `cp` command is used to copy files or directories.
+Syntax: su
 
-**Syntax:**
-```bash
-cp <source_file> <destination_file>
-```
+<img width="296" height="88" alt="cs9" src="https://github.com/user-attachments/assets/7ac4ef75-ca8e-4d35-8d53-0aaee9637d26" />
 
-**Output:**
 
-<img width="314" alt="image" src="https://github.com/user-attachments/assets/1851692d-2d1a-4974-8181-3b40cbd696ba">
+## 10) mv Command
+The mv command is used to move a file or a directory form one location to another location.
 
+Syntax: mv
 
-## 8. `gedit` Command
+<img width="363" height="265" alt="cs10" src="https://github.com/user-attachments/assets/82dfea24-c76b-4f78-ba13-62c8b1322160" />
 
-`gedit` is a general-purpose text editor used to create and edit text files.
 
-**Syntax:**
-```bash
-gedit <file_name>
-gedit filename.txt 
-```
+## 11) rename Command
+The rename command is used to rename files. It is useful for renaming a large group of files.
 
-### Output:
-![image](https://github.com/user-attachments/assets/d16fe2e2-f203-467a-a256-9a279889ae51)
+Syntax: rename 's/old-name/new-name/' files
 
+<img width="462" height="171" alt="cs11" src="https://github.com/user-attachments/assets/926c9950-4260-437d-bb81-040c3a7670bb" />
 
-## 9. `su` Command
 
-The `su` command provides administrative access to another user.
+## 12) head Command
+The head command is used to display the content of a file. It displays the first 10 lines of a file.
 
-**Syntax:**
-```bash
-su <username>
-su root
-```
+Syntax: head
 
-### Output:
-![image](https://github.com/user-attachments/assets/da3d9bab-1f43-4fd2-936d-cd5d208eb605)
+<img width="394" height="528" alt="cs12" src="https://github.com/user-attachments/assets/73a75ddb-cb76-4f6d-b59c-6779272f29a0" />
 
 
-## 10. `mv` Command
+## 13) tail Command
+The tail command is similar to the head command. The difference between both commands is that it displays the last ten lines of the file content. It is useful for reading the error message.
 
-The `mv` command is used to move a file or directory from one location to another.
+Syntax: tail
 
-**Syntax:**
-```bash
-mv <file_name> <directory_path>
-mv filename.txt cloud2
+<img width="299" height="238" alt="cs13" src="https://github.com/user-attachments/assets/ffa8c88c-2c50-4702-a28e-2a26f2dd6129" />
 
-```
-### Output:
-![image](https://github.com/user-attachments/assets/a18d0a45-75ba-456a-8dfb-8e96b44bd105)
 
+## 14) id Command
+The id command is used to display the user ID (UID) and group ID (GID).
 
-## 11. `rename` Command
+Syntax: id
 
-The `rename` command is used to rename files.
+<img width="931" height="48" alt="cs14" src="https://github.com/user-attachments/assets/7ad8c195-85aa-48c2-ab75-47ede32cd166" />
 
-**Syntax:**
-```bash
-rename oldfile.txt newfile.txt
-```
 
-### Output:
-![image](https://github.com/user-attachments/assets/749822e3-c9dc-431f-b573-cf200afa24ac)
+## 15) grep Command
+The grep is the most powerful and used filter in a Linux system. The 'grep' stands for "global regular expression print." It is useful for searching the content from a file. Generally, it is used with the pipe.
 
+Syntax: command | grep
 
-## 12. `head` Command
+<img width="349" height="74" alt="cs15" src="https://github.com/user-attachments/assets/74349097-1bc3-4e9c-a004-a5912c99b017" />
 
-The `head` command displays the first 10 lines of a file.
 
-**Syntax:**
-```bash
-head <file_name>
-head filename.txt 
-```
+## 16) tr Command
+The tr command is used to translate the file content like from lower case to upper case.
 
-### Output:
-![image](https://github.com/user-attachments/assets/f4dbcef7-ff80-436a-8a47-83f63f8e1e70)
+Syntax: command | tr <'old'> <'new'>
 
+<img width="465" height="299" alt="cs16" src="https://github.com/user-attachments/assets/10c9eb2b-157d-4206-a9df-dfa870a4ff12" />
 
-## 13. `tail` Command
 
-The `tail` command displays the last 10 lines of a file.
+## 17) chmod Command
+The chmod command is used to change the access mode of a file (i.e., read, write or execute)
 
-**Syntax:**
-```bash
-tail <file_name>
-tail filename.txt 
-```
-### Output:
-![image](https://github.com/user-attachments/assets/bd496d57-44d8-4b7e-8305-e2359d5fc121)
+Syntax: chmod<file_name>
 
+<img width="450" height="118" alt="cs17" src="https://github.com/user-attachments/assets/05aecff4-d510-421b-827b-3236038e3e5c" />
 
-## 14. `id` Command
 
-The `id` command displays the user ID (UID) and group ID (GID).
+## 18) tar Command
+The tar command is used for creating Archieve and extracting the archieve files.
 
-**Syntax:**
-```bash
-id
-```
+Syntax: tar[options][archieve-file] [file to be archieved] $ tar xvzf file.tar *.c
 
-### Output:
-![image](https://github.com/user-attachments/assets/ad42807e-d328-4d8d-97e3-fb18dd632c9f)
+<img width="369" height="159" alt="cs18" src="https://github.com/user-attachments/assets/e921e18d-2e0a-4cf5-a4d1-b397f6e44ecf" />
 
 
-### 15. `grep` Command
+## 19) chown Command
+The chown command is used to change ownership.
 
-The `grep` command is used to search for a pattern within files.
+Syntax: chown owner_name file_name
 
-**Syntax:**
-```bash
-command | grep <search_word>
-```
+<img width="472" height="132" alt="cs19" src="https://github.com/user-attachments/assets/62eedfd2-715a-4da5-b056-4131a132aed5" />
 
-### Output:
-![image](https://github.com/user-attachments/assets/aad161ad-1d4d-4252-b154-22fcd6944ff2)
 
+## 20) make Command
+The make command is used for building and maintaining group of program.
 
-## 16. `tr` Command
+Syntax: make [-f makefile][options]…….[targets]….
 
-The `tr` command is used to translate or delete characters.
+<img width="233" height="67" alt="cs20" src="https://github.com/user-attachments/assets/fb212213-9e76-43fd-8260-f5b510731dda" />
 
-**Syntax:**
-```bash
-command | tr <old> <new>
-echo "hello world" | tr 'a-z' 'A-Z'
-echo "banana" | tr -d 'a'
-echo "one two three" | tr ' ' '\n'
-```
 
-### Output:
-![image](https://github.com/user-attachments/assets/4801f8d1-9221-4969-810d-f945155db023)
+## 21) ifconfig Command
+The ifconfig command is used to configure kernel-resident network interface.
 
+Syntax: ifconfig[options][interface]
 
-## 17. `chmod` Command
+<img width="861" height="104" alt="cs21" src="https://github.com/user-attachments/assets/e31638d9-d5da-43dd-b65e-ad271833d602" />
 
-The `chmod` command is used to change the access mode (permissions) of a file.
 
-**Syntax:**
-```bash
-chmod <options> <permissions> <file_name>
-chmod 755 file1
-```
+## 22) chmod 777 Command
+The chmod 777 command gives read, write and execute permission to the owner, group and public.
 
-### Output:
-![image](https://github.com/user-attachments/assets/965bfe60-371a-4ccc-99ea-ecfae690308e)
+Syntax: chmod 777 file_name $chmod -R 777 /path/to/file/or/folder
 
+<img width="493" height="118" alt="cs22" src="https://github.com/user-attachments/assets/8ad5d3d6-29f6-4923-a724-9f8faa729750" />
 
-## 18. `tar` Command
 
-The `tar` command is used to create or extract archive files.
+## 23) host Command
+The host command is used to display the IP address for a given domain name and vice versa. It performs the DNS lookups for the DNS Query.
 
-**Syntax:**
-```bash
-tar [options] [archive-file] [files_to_archive]
-tar -cvf archive.tar file1 file2
-```
+Syntax: host or
 
-### Output:
-![image](https://github.com/user-attachments/assets/bf37f2b2-e877-4db2-96ad-94a8dd21c776)
+<img width="605" height="101" alt="cs23" src="https://github.com/user-attachments/assets/16c4a668-9c91-49cd-8f5b-5fb84f3da6da" />
 
 
-## 19. `chown` Command
+## 24) gzip Command
+The gzip command is used to truncate the file size. It is a compressing tool. It replaces the original file by the compressed file having '.gz' extension.
 
-The `chown` command is used to change the ownership of a file.
+Syntax: gzip ..
 
-**Syntax:**
-```bash
-chown <owner_name> <file_name>
-chown bharathi:root file1
-```
+<img width="926" height="148" alt="cs24" src="https://github.com/user-attachments/assets/92b7b483-82aa-4837-a445-d2a31d323284" />
 
-### Output:
-![image](https://github.com/user-attachments/assets/1a2e9440-d1e7-41b7-91d9-bcf5baf6e6c3)
 
+## 25) sort Command
+The sort command is used to sort files in alphabetical order.
 
-## 20. `make` Command
+Syntax:sort
 
-The `make` command is used to build and maintain groups of programs.
+<img width="246" height="303" alt="cs25" src="https://github.com/user-attachments/assets/6a91d4c3-1f83-40e6-b63a-573dfea93c16" />
 
-**Syntax:**
-```bash
-make [-f makefile] [options] [targets]
-nano Makefile
-make
-make clean
-```
 
-### Output:
-![image](https://github.com/user-attachments/assets/bbb8e1d8-2649-4945-b75a-8fa3f720e9c3)
+## 26) cal Command
+The cal command is used to display the current month's calendar with the current date highlighted.
 
+Syntax: cal
 
-## 21. `ifconfig` Command
+<img width="515" height="294" alt="image" src="https://github.com/user-attachments/assets/b4f0c030-9987-45f5-8e16-aedee1238ddd" />
 
-The `ifconfig` command is used to configure network interfaces.
 
-**Syntax:**
-```bash
-ifconfig [options] [interface]
-```
+## 27) clear Command
+Linux clear command is used to clear the terminal screen.
 
-### Output:
-![image](https://github.com/user-attachments/assets/2f4044fd-18f2-412f-9c12-b8b04a09a808)
+Syntax: clear
 
+<img width="1920" height="1165" alt="image" src="https://github.com/user-attachments/assets/5055c031-901e-495e-aa00-a7526c5431d9" />
 
-## 22. `chmod 777` Command
 
-The `chmod 777` command gives read, write, and execute permissions to the owner, group, and others.
+<img width="1920" height="1165" alt="image" src="https://github.com/user-attachments/assets/8c505f70-087d-4953-a335-a07cb59e39c1" />
 
-**Syntax:**
-```bash
-chmod 777 <file_name>
-chmod 777 filename.txt 
-```
 
-### Output:
-![image](https://github.com/user-attachments/assets/3c34e47b-a812-43d7-bfbc-3aab505114c9)
 
+## 28) mail Command
+The mail command is used to send emails from the command line.
 
-## 23. `host` Command
+Syntax: mail -s "Subject"
 
-The `host` command is used to display the IP address for a given domain name.
+<img width="743" height="67" alt="cs28" src="https://github.com/user-attachments/assets/dea2e191-62cf-469a-bc7b-cd59b3c10805" />
 
-**Syntax:**
-```bash
-host <domain_name> or <ip_address>
-host www.amazon.com
 
-```
+## 29) df Command
+The df command is used to display the disk space used in the file system. It displays the output as in the number of used blocks, available blocks, and the mounted directory.
 
-### Output:
-![image](https://github.com/user-attachments/assets/a551b58b-26cd-4056-bc7f-38d0b531d21e)
+Syntax: df
 
+<img width="930" height="298" alt="cs29" src="https://github.com/user-attachments/assets/9b910c54-e255-4793-b44e-1bde1e5fcbe4" />
 
-## 24. `gzip` Command
 
-The `gzip` command is used to compress files, replacing the original file with a compressed one with a `.gz` extension.
+## 30) find Command
+The find command is used to find a particular file within a directory.
 
-**Syntax:**
-```bash
-gzip filename.txt
-gzip -d filename.txt.gz
-gzip -k filename.txt
-gzip -l filename.txt.gz  
-```
+Syntax: find.-name”*.pdf”
 
-### Output:
-![image](https://github.com/user-attachments/assets/761d6bed-dd17-43b9-805f-124dfd9b66b8)
+<img width="293" height="85" alt="cs30a" src="https://github.com/user-attachments/assets/c8f8528f-ae3b-4756-b934-25eb2f8e6214" />
 
+<img width="351" height="75" alt="cs30b" src="https://github.com/user-attachments/assets/dca642e7-e848-4da3-a6e7-03b51b731bd2" />
 
-## 25. `sort` Command
+## Result:
+Thus, the execution of various Linux commands is executed successfully using Kali Linux.
 
-The `sort` command is used to sort the contents of a file alphabetically.
-
-**Syntax:**
-```bash
-sort <file_name>
-sort filename.txt
-```
-
-### Output:
-![image](https://github.com/user-attachments/assets/539348b5-92c8-4a67-bdff-c848d2754c11)
-
-
-## 26. `cal` Command
-
-The `cal` command displays the current month's calendar with the current date highlighted.
-
-**Syntax:**
-```bash
-cal
-```
-
-### Output:
-![image](https://github.com/user-attachments/assets/de1082c8-49d7-4fc6-b64a-2446c3abad56)
-
-
-## 27. `clear` Command
-
-The `clear` command clears the terminal screen.
-
-**Syntax:**
-```bash
-clear
-```
-
-### Output:
-![image](https://github.com/user-attachments/assets/bb7a7e1f-ae07-4e6c-91b8-5ec792fe6402)
-
-
-## 28. `mail` Command
-
-The `mail` command is used to send emails from the command line.
-
-**Syntax:**
-```bash
-mail
-```
-
-### Output:
-![image](https://github.com/user-attachments/assets/db5cad74-8a0f-452f-bbd8-67ce911afbd0)
-
-
-## 29. `df` Command
-
-The `df` command displays the disk space usage of file systems.
-
-**Syntax:**
-```bash
-df
-```
-
-### Output:
-![image](https://github.com/user-attachments/assets/8d3b62c0-5558-4162-a2cd-ea07d45701d7)
-
-
-## 30. `find` Command
-
-The `find` command is used to search for files in a directory hierarchy.
-
-**Syntax:**
-```bash
-find <directory> -name <file_name>
-find /etc -name "passwd"
-```
-
-### Output:
-![image](https://github.com/user-attachments/assets/74844dc1-0c8a-45d3-ac0d-93da990187ca)
-
-
-## Result :
-Linux commands are executed in the linux terminal successfully.
